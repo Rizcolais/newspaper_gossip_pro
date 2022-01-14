@@ -1,0 +1,31 @@
+// responsive
+
+$bigscreen: 1200px; 
+$macbook: 1018px; 
+$computer: 768px;
+$small: 767px;
+$verysmall: 620px;
+
+@mixin bigscreen {
+    @media screen and (max-width: $bigscreen) {
+        @content;
+    }
+}
+
+@mixin between {
+    @media (min-width: $computer) and (max-width: $macbook) {
+        @content;
+    }
+}
+
+@mixin responsive {
+    @media screen and (max-width: $small) {
+        @content;
+    }
+}
+
+@mixin myscreen {
+    @media screen and (max-width: $verysmall) {
+        @content;
+    }
+}

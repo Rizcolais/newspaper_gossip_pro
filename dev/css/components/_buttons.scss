@@ -1,0 +1,22 @@
+.btn-rouge {
+    background-color: $red001;
+    padding: 6px 12px;
+    text-align: center;
+    color:white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    line-height: 1;
+    display:inline-block;
+}
+
+.titre-barre {
+    display:flex;
+    align-items: center;
+    text-transform: uppercase;
+    span {
+        background-color: $gray002;
+        color: $gray002;
+        height:4px;
+        margin-left: 15px;
+    }
+}
