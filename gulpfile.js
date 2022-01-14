@@ -40,12 +40,12 @@ gulp.task('htmlification', function() {
 //jsification
 gulp.task('jsification',function () {
 	return gulp
-		.src('dev/js/*.js')
+		.src('dev/script/*.js')
 		.pipe(uglify())
 		.pipe(rename(function (path) {
 				path.basename += '.min';
 			}))
-		.pipe(gulp.dest('prod/js'));
+		.pipe(gulp.dest('prod/script'));
 });
 
 //browser-sync
@@ -70,7 +70,7 @@ gulp.task('imaginification', function (){
 gulp.task('observation',gulp.parallel('browser-sync', 'sassification','htmlification','jsification', 'imaginification', function (){
     gulp.watch('dev/css/**/*.scss', gulp.series('sassification'));
     gulp.watch('dev/*.html', gulp.series('htmlification'));
-    gulp.watch('dev/js/*/.js', gulp.series('jsification'));
+    gulp.watch('dev/script/*/.js', gulp.series('jsification'));
     gulp.watch('prod/**/*').on('change', browserSync.reload);
 }));
 

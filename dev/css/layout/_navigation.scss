@@ -1,0 +1,22 @@
+/* swiper */
+
+.swiper {
+    width:100%;
+    height:100%;
+    .swiper-wrapper {
+        width:150px;
+    }
+}
+.image {
+    .swiper-button-prev, .swiper-button-next {
+        opacity: 0;
+        transition: all 0.5s ease;
+        color:white;
+    }
+} 
+
+.image:hover {
+    .swiper-button-prev, .swiper-button-next {
+        opacity: 1;
+    }
+}
